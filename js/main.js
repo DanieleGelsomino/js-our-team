@@ -15,13 +15,14 @@ console.log("JS OK!");
     e viene stampata una nuova card con tutte le informazioni inserite dall'utente.
 */
 
-// Creo array di oggetti che rappresentano membti di un team.
+// Creo array di oggetti che rappresentano membri di un team.
+// ogni membro è composto da: nome, ruolo e foto.
 
-const team = [
+const teamMembers = [
   {
     nome: "Wayne Barnett",
     ruolo: "Founder & CEO",
-    foto: "img/walter-barnett-founder-ceo.jpg",
+    foto: "img/wayne-barnett-founder-ceo.jpg",
   },
 
   {
@@ -56,8 +57,33 @@ const team = [
   },
 ];
 
-console.log(team);
+console.log(teamMembers);
 
-//ogni membro è composto da: nome, ruolo e foto.
+const containerCard = document.querySelector(".team-container");
 
 // stampare nell' Html una card per ogni membro del team.
+// creo funzione per generare le card e le aggiungo nell'html
+
+function generateCard() {
+  for (let i = 0; i < teamMembers.length; i++) {
+    //   creo teamCard
+    const teamCard = document.createElement("div");
+    teamCard.className = "team-card";
+    containerCard.appendChild(teamCard);
+
+    // creo cardImage
+    const cardImage = document.createElement("div");
+    cardImage.className = "card-image";
+    teamCard.appendChild(cardImage);
+    cardImage.innerHTML = `<img src="${teamMembers[i].foto}"/>`;
+
+    // creo cardText
+    const cardText = document.createElement("div");
+    cardText.className = "card-text";
+    teamCard.appendChild(cardText);
+    cardText.innerHTML = `<h3>${teamMembers[i].nome}</h3>
+    <p>${teamMembers[i].ruolo}</p>`;
+  }
+}
+
+generateCard();
