@@ -14,3 +14,50 @@ console.log("JS OK!");
     cliccando sul pulsante "add" viene creato un *nuovo oggetto*, il quale viene *inserito nell'array iniziale*
     e viene stampata una nuova card con tutte le informazioni inserite dall'utente.
 */
+
+// Creo array di oggetti che rappresentano membti di un team.
+
+const team = [
+  {
+    nome: "Wayne Barnett",
+    ruolo: "Founder & CEO",
+    foto: "img/walter-barnett-founder-ceo.jpg",
+  },
+
+  {
+    nome: "Angela Caroll",
+    ruolo: "Chief Editor",
+    foto: "img/angela-caroll-chief-editor.jpg",
+  },
+
+  {
+    nome: "Walter Gordon",
+    ruolo: "Office Manager",
+    nome: "Walter Gordon",
+    foto: "img/walter-gordon-office-manager.jpg",
+  },
+
+  {
+    nome: "Angela Lopez",
+    ruolo: "Social Media Manager",
+    foto: "img/angela-lopez-social-media-manager.jpg",
+  },
+
+  {
+    nome: "Scott Estrada",
+    ruolo: "Developer",
+    foto: "img/scott-estrada-developer.jpg",
+  },
+
+  {
+    nome: "Barbara Ramos",
+    ruolo: "Graphic Designer",
+    foto: "img/barbara-ramos-graphic-designer.jpg",
+  },
+];
+
+console.log(team);
+
+//ogni membro è composto da: nome, ruolo e foto.
+
+// stampare nell' Html una card per ogni membro del team.
